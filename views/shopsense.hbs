@@ -1,0 +1,68 @@
+
+<div id="products" class="row" style=:"margin:0;">
+{{#everyNth products 4}}
+  {{#if isModZeroNotFirst}}
+    </div>
+  {{/if}}
+  {{#if isModZero}}
+    <div class="row" style='border-bottom:solid #ECEBED 1px;padding:10px 0;margin:0;'>
+  {{/if}}
+   	<div class="col-md-3">
+		<img src="{{this.image.sizes.Large.url}}" />
+		<h3>{{name}}</h3>
+		<p class="price">
+      <span {{#if this.salePriceLabel}}class="price-label"{{/if}}>{{this.priceLabel}}</span>
+      {{#if this.salePriceLabel}}
+        <span class="on-sale-price-label">{{this.salePriceLabel}}</span>
+      {{/if}}
+    </p>
+		<p><a class="btn btn-primary" target="_blank" href="{{this.clickUrl}}">I Want</a></p>
+	</div>
+  {{#if isLast}}
+    </div>
+  {{/if}}
+{{/everyNth}}
+ </div>
+
+<div id="product-paging" class="row" style="margin:0;">
+
+<div class="col-md-6">
+	{{#if pagination.page}}
+		<p id="page-count">Showing Page: <span class="current-page">{{pagination.page}}</span> of {{pagination.pageCount}} </p>
+	{{/if}}
+</div>
+
+<div class="col-md-6">
+  <ul class="pagination pagination-lg">
+	 {{#paginate pagination type="previous"}}
+      <li {{#if disabled}}class="disabled"{{/if}}>
+      	{{#if theStart}}
+      		<a href="/{{path}}" style="display:none;">Previous</a>
+      	{{else}}
+      	{{#if isPageOne}}
+      		<a href="/{{path}}/">Previous</a>
+      	{{else}}
+			<a href="{{n}}">Previous</a>
+			{{/if}}
+      	{{/if}} 
+      </li>
+    {{/paginate}}
+    <!--{{#paginate pagination type="middle"}}
+      <li {{#if active}}class="active"{{/if}}><a href="umbrellas/{{n}}">{{n}}</a></li>
+    {{/paginate}}-->
+    {{#paginate pagination type="next"}}
+      <li {{#if disabled}}class="disabled"{{/if}}>
+      	{{#if theStart}}
+      		<a href="/{{path}}/{{n}}">Next</a>
+      	{{else}}
+      	{{#if isLastPage}}
+      		<a href="/{{path}}/" style="display:none;">Next</a>
+      	{{else}}
+			<a href="{{n}}">Next</a>
+			{{/if}}
+      	{{/if}} 
+      </li>
+    {{/paginate}}
+  </ul>
+</div>
+</div>

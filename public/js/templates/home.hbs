@@ -1,0 +1,16 @@
+{{#each_upto this.daily.data 3}}	
+<div class="col-md-4 day-reco">
+	 <h3 class="forecast">{{weatherIcon icon}} {{makeToHumanDate time}}</h3>
+	 <h4 class="temp">High {{roundTemp temperatureMax}}&deg; - Low {{roundTemp temperatureMin}}&deg;</h4>
+	 <!--<p>{{summary}} Wind speed of {{roundTemp windSpeed}}.</p>-->
+
+	 <p>
+	 	<img src="images/models/rainy_w_01.jpg">
+	 </p>
+
+	 <p><a class="btn btn-primary" href="/umbrellas">View Umbrellas</a></p>
+	 <p><a class="btn btn-primary" href="/jeans">View Jeans</a></p>
+	 <p><a class="btn btn-primary" href="/shoes">View shoes</a></p>
+
+</div>
+{{/each_upto}}

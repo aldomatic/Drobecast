@@ -1,0 +1,32 @@
+{{#each this.daily.data}}
+	<div class="va-slice va-slice-color-{{@index}}">
+	    <h3 class="va-title">{{weatherIcon icon}} {{makeToHumanDate time}} - <span class="temp">{{roundTemp temperatureMax}}&deg;</span></h3>
+	    <div class="va-content">
+	    	<h4>{{summary}} Wind speed of {{roundTemp windSpeed}}.</h4>
+	    	
+	    	<div class="row va-ideas">
+		    	<div class="col-md-3">
+		    		<h3>Umbrella</h3>
+		    		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
+		    		<a class="btn btn-primary" href="/umbrellas">View Umbrellas</a>
+		    	</div>
+		    	<div class="col-md-3">
+		    		<h3>Shoes</h3>
+		    		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+		    		<a class="btn btn-primary" href="/shoes">View Shoes</a>
+		    	</div>
+		    	<div class="col-md-3">
+		    		<h3>Jeans</h3>
+		    		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+		    		<a class="btn btn-primary" href="/jeans">View Jeans</a>
+		    	</div>
+		    	<div class="col-md-3">
+		    		<h3>Bottoms</h3>
+		    		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.. </p>
+		    		<a class="btn btn-primary" href="/umbrellas">View Bottoms</a>
+		    	</div>
+		    </div>
+
+	    </div>
+	</div>
+{{/each}}
