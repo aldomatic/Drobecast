@@ -73,4 +73,4 @@ app.get('/zipcodetolatandlng/:zipcode', function(req, res){
 });
 
 app.listen(5555);
-console.log("server started");
+console.log("Server started at port 5555");
