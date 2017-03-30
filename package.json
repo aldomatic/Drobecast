@@ -1,15 +1,15 @@
 {
   "name": "drobecast",
   "version": "0.0.1",
+  "scripts":{
+    "start": "node server.js"
+  },
   "dependencies": {
     "express": "~4.9.5",
-    "yelp": "^0.1.1",
+    "express-handlebars": "^1.2.1",
+    "handlebars-paginate": "^0.1.0",
     "node-geocoder": "^2.14.0",
     "request": "^2.53.0",
-    "mongodb": "^1.4.30",
-    "moment": "^2.9.0",
-    "underscore": "^1.7.0",
-    "express-handlebars": "^1.2.1",
-    "yql": "^1.0.2"
+    "underscore": "^1.7.0"
   }
 }

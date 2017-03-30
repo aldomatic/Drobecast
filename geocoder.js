@@ -1,5 +1,5 @@
 var request = require('request');
-var apiKey = 'AIzaSyDO_i4MdB-fJomY1-E-n4xud9atm6783ug';
+var apiKey = 'AIzaSyAnltInxnuZ3RLaNCogvR2mjlC3YT1_rY4';
 var geocoder = {};
 
 // Used to handle the response for all the API calls

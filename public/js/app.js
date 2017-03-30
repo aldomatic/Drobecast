@@ -86,7 +86,7 @@ function renderDailyWeatherTemplate(context){
 $(document).ready(function(){
   //$("#zipcode").focus();
   //getCityFromLatAndLng();
-  getLocation();
+  //getLocation();
   //getForecast(32.786330, -96.796253);
 });
 
