@@ -23,10 +23,10 @@ exports.umbrellas = function(req, res){
 		json: true
 	}, function (error, response, body){
 		var numberOfPages = (body.metadata.total / 20);
-		res.render('shopsense', {products: body.products, pagination: {
+		res.render('shopsense', {products: body.products, path: pathName[1], pagination: {
 		  page: 0,
-		  pageCount: Math.floor(numberOfPages),
-		  path: pathName[1]}
+		  pageCount: Math.floor(numberOfPages)
+			}
 		});
 	});
 }
@@ -38,10 +38,10 @@ exports.umbrellasWithPaging = function(req, res){
 		json: true
 	}, function (error, response, body){
 		var numberOfPages = (body.metadata.total / 20);
-		res.render('shopsense', {products: body.products, pagination: {
+		res.render('shopsense', {products: body.products, path: pathName[1],  pagination: {
 		  page: req.params.page,
-		  pageCount: Math.floor(numberOfPages),
-		  path: pathName[1]}
+		  pageCount: Math.floor(numberOfPages)
+		  }
 		});
 	});
 }
@@ -55,10 +55,10 @@ exports.shoes = function(req, res){
 		json: true
 	}, function (error, response, body){
 		var numberOfPages = (body.metadata.total / 20);
-		res.render('shopsense', {products: body.products, pagination: {
-		  page: 0,
-		  pageCount: Math.floor(numberOfPages),
-		  path: pathName[1]}
+		res.render('shopsense', {products: body.products, path: pathName[1], pagination: {
+				page: 0,
+				pageCount: Math.floor(numberOfPages)
+			}
 		});
 	});
 }
@@ -70,10 +70,10 @@ exports.shoesWithPaging = function(req, res){
 		json: true
 	}, function (error, response, body){
 		var numberOfPages = (body.metadata.total / 20);
-		res.render('shopsense', {products: body.products, pagination: {
-		  page: req.params.page,
-		  pageCount: Math.floor(numberOfPages),
-		  path: pathName[1]}
+		res.render('shopsense', {products: body.products,  path: pathName[1], pagination: {
+				page: req.params.page,
+				pageCount: Math.floor(numberOfPages)
+			}
 		});
 	});
 }
@@ -86,10 +86,10 @@ exports.jeans = function(req, res){
 		json: true
 	}, function (error, response, body){
 		var numberOfPages = (body.metadata.total / 20);
-		res.render('shopsense', {products: body.products, pagination: {
+		res.render('shopsense', {products: body.products, path: pathName[1], pagination: {
 		  page: 0,
-		  pageCount: Math.floor(numberOfPages),
-		  path: pathName[1]}
+		  pageCount: Math.floor(numberOfPages)
+		  }
 		});
 	});
 }
@@ -101,10 +101,10 @@ exports.jeansWithPaging = function(req, res){
 		json: true
 	}, function (error, response, body){
 		var numberOfPages = (body.metadata.total / 20);
-		res.render('shopsense', {products: body.products, pagination: {
+		res.render('shopsense', {products: body.products, path: pathName[1], pagination: {
 		  page: req.params.page,
-		  pageCount: Math.floor(numberOfPages),
-		  path: pathName[1]}
+		  pageCount: Math.floor(numberOfPages)
+		}
 		});
 	});
 }
